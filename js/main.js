@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const inputSenha = document.getElementById("senha");
-  const botaoOlho = document.getElementById("alternarSenha");
-  const textoAlterar = document.getElementById("senhaErrorText");
+  const inputSenha = document.getElementById("senha"); // input
+  const botaoOlho = document.getElementById("alternarSenha"); // button
+  const textoAlterar = document.getElementById("senhaErrorText");// label
 
-  const msgErroEmail = document.getElementById("mensagem-erro");
-  const msgErroLabel = document.getElementById("emailTexto");
-  const inputEmail = document.getElementById("email");
+  const msgErroLabel = document.getElementById("emailTexto"); // label
+  const inputEmail = document.getElementById("email"); // input
 
-  const inputCheckbox = document.getElementById("lembrarCheck");
-  const imgMostrar = document.getElementById("imgCheck");
+  const inputCheckbox = document.getElementById("lembrarCheck"); // label
+  const imgMostrar = document.getElementById("imgCheck"); // img
 
   botaoOlho.addEventListener("click", () => {
     if (inputSenha.type === "password") {
@@ -19,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   inputSenha.addEventListener("input", () => {
-    if (inputSenha.value.trim() === "") {
+
+    if (inputSenha.value === "") {
       inputSenha.style.border = "2px solid red";
       inputSenha.style.borderRadius = "10px";
       inputSenha.style.width = "";
@@ -27,11 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } else {
       inputSenha.style.border = "";
+      textoAlterar.style.color = "black";
     }
   });
 
   inputEmail.addEventListener("input", () => {
-    if (inputEmail.value.trim() === "") {
+
+    if (inputEmail.value === "") {
       inputEmail.style.border = "2px solid red";
       inputEmail.style.borderRadius = "10px";
       inputEmail.style.width = "";
@@ -41,6 +43,17 @@ document.addEventListener("DOMContentLoaded", () => {
         msgErroLabel.style.color = "black";
     }
   })
+
+  imgMostrar.style.display = "none";
+
+  inputCheckbox.addEventListener("click", () => {
+    if (inputCheckbox.checked) {
+      imgMostrar.style.display = "block"
+    } else {
+      imgMostrar.style.display = "none"
+    }
+  })
+
 
   
 
