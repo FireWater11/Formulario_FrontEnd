@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputCheckbox = document.getElementById("lembrarCheck"); // label
   const imgMostrar = document.getElementById("imgCheck"); // img
 
+  const spanMostrar = document.getElementById("spanInserirEmail"); // span do email
+  const spanMostrar2 = document.getElementById("spanInserirSenha"); // span da senha
+
   botaoOlho.addEventListener("click", () => {
 
     if (inputSenha.type === "password") {
@@ -25,11 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
       inputSenha.style.border = "2px solid red";
       inputSenha.style.borderRadius = "10px";
       textoAlterar.style.color = "red";
+      spanMostrar2.style.display = "block";
     } 
     
     else {
       inputSenha.style.border = "";
       textoAlterar.style.color = "black";
+      spanMostrar2.style.display = "none";
     }
   });
 
@@ -38,11 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
       inputEmail.style.border = "2px solid red";
       inputEmail.style.borderRadius = "10px";
       msgErroLabel.style.color = "red";
+      spanMostrar.style.display = "block";
     } 
     
     else {
-      inputEmail.style.border = "";
+      inputEmail.style.border = "black";
       msgErroLabel.style.color = "black";
+      spanMostrar.style.display = "none";
     }
   });
 
