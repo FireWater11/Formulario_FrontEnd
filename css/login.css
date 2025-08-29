@@ -22,20 +22,95 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 150px;
+    gap: 5px;
 }
 
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#box-esquerda,
+#box-direita {
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
 
 #box-esquerda {
-    background-color: aqua;
-    height: 100px;
-    width: 100px;
+    width: 400px;
+    height: 500px;
+    border-radius: 50% 0 0 50%; /* nao remover, msm parecendo estar repetido */
 }
 
 #box-direita {
-    background-color: orange;
-    height: 100px;
-    width: 100px;
+    width: 400px;
+    height: 500px;
+    border-radius: 0 50% 50% 0; /* nao remover, mesmo parecendo estar repetido */
+}
+
+/* borda animada */
+#box-esquerda::before,
+#box-direita::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+
+    /* 
+    documentaçao stack overflow: 
+
+    0 0 = canto superior esquerdo 
+    100% 0 = canto superior direito 
+    100% 100% = canto inferior direito 
+    0 100% = canto inferior esquerdo
+    
+    */
+
+    background-image: linear-gradient(#1e3a8a, #1e3a8a),
+            linear-gradient(#3b82f6, #3b82f6),
+            linear-gradient(#60a5fa, #60a5fa),
+            linear-gradient(#93c5fd, #93c5fd);
+    animation: rotate 6s linear infinite;
+}
+
+/* preenchimento interno */
+#box-esquerda::after,
+#box-direita::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    /* será feito um calculo: pegara 100% do tamanho do elemento pai e vai diminuir 12 px (tamanho do preenchimento branco -- after) 
+    e isso vai mostrar como se fosse so a borda */
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    /* teste: mudar para transparent */
+    background: url(../img/foto_estrelas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#box-direita::after {
+    transform: rotateX(180deg);
+}
+
+#box-esquerda::before,
+#box-esquerda::after {
+    border-radius: 50% 0 0 50%;
+}
+
+#box-direita::before,
+#box-direita::after {
+    border-radius: 0 50% 50% 0;
 }
 
 .cartao-login {
@@ -400,8 +475,3 @@ body {
 .link-cadastro a:hover {
     color: #3d4468;
 }
-
-
-
-
-
