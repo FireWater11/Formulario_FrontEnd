@@ -8,86 +8,94 @@
         <link rel="shortcut icon" href="../img/icone_login.svg" type="image/x-icon">
     </head>
     <body>
-        <main>
-            <div class="container-login">
-                <div class="cartao-login">
-                    <section>
-                        <div class="cabecalho-login">
-                            <div class="icone-neu">
-                                <div class="icone-interno">
-                                    <img src="../img/icone_user.svg">
+        <main class="main-login">
+            <div id="container-flex">  
+                <div id="box-esquerda">
+
+                </div>      
+                <div class="container-login">
+                    <div class="cartao-login">
+                        <section>
+                            <div class="cabecalho-login">
+                                <div class="icone-neu">
+                                    <div class="icone-interno">
+                                        <img src="../img/icone_user.svg">
+                                    </div>
                                 </div>
+                                <h2>Bem-vindo</h2>
+                                <p>Faça login para continuar</p>
                             </div>
-                            <h2>Bem-vindo</h2>
-                            <p>Faça login para continuar</p>
-                        </div>
-                    </section>
-                    
-                    <section>
-                        <form target="_blank" class="formulario-login" id="formLogin" novalidate>
-                            <div class="grupo-formulario">
-                                <div class="neu-input">
-                                    <input type="email" id="email" name="email" required>
-                                    <label id="emailTexto" for="email">Endereço de e-mail</label>
+                        </section>
+                        
+                        <section>
+                            <form target="_blank" class="formulario-login" id="formLogin" novalidate>
+                                <div class="grupo-formulario">
+                                    <div class="neu-input">
+                                        <input type="email" id="email" name="email" required>
+                                        <label id="emailTexto" for="email">Endereço de e-mail</label>
+                                    </div>
+                                    <span id="spanInserirEmail">Insira o Email</span>
                                 </div>
-                                <span id="spanInserirEmail">Insira o Email</span>
-                            </div>
 
-                            <div class="grupo-formulario">
-                                <div class="neu-input">
-                                    <input type="password" id="senha" name="senha" required>
-                                    <label id="senhaErrorText" for="senha">Senha</label>
-                                    <button type="button" class="alternar-senha neu-toggle" id="alternarSenha">
-                                        <img id="svg" src="../img/icone_eye.svg">
-                                    </button>
+                                <div class="grupo-formulario">
+                                    <div class="neu-input">
+                                        <input type="password" id="senha" name="senha" required>
+                                        <label id="senhaErrorText" for="senha">Senha</label>
+                                        <button type="button" class="alternar-senha neu-toggle" id="alternarSenha">
+                                            <img id="svg" src="../img/icone_eye.svg">
+                                        </button>
+                                    </div>
+                                    <span id="spanInserirSenha">Insira a senha</span>
                                 </div>
-                                <span id="spanInserirSenha">Insira a senha</span>
-                            </div>
 
-                            <div class="opcoes-formulario">
-                                <div class="lembrar-wrapper">
-                                    <input type="checkbox" id="lembrarCheck">
-                                    <label for="lembrarCheck" class="rotulo-checkbox">
-                                        <div class="neu-checkbox">
-                                            <img id="imgCheck" src="../img/icone_check.svg">
-                                        </div>
-                                        Lembrar de mim
-                                    </label>
+                                <div class="opcoes-formulario">
+                                    <div class="lembrar-wrapper">
+                                        <input type="checkbox" id="lembrarCheck">
+                                        <label for="lembrarCheck" class="rotulo-checkbox">
+                                            <div class="neu-checkbox">
+                                                <img id="imgCheck" src="../img/icone_check.svg">
+                                            </div>
+                                            Lembrar de mim
+                                        </label>
+                                    </div>
+                                    <a href="#" class="link-esqueci">Esqueceu a senha?</a>
                                 </div>
-                                <a href="#" class="link-esqueci">Esqueceu a senha?</a>
+
+                                <button  type="submit" class="botao-neu botao-login">
+                                    <span class="texto-botao">Entrar</span> 
+                                </button>
+                            </form>
+                        </section>
+
+                        <section>
+                            <div class="divisor">
+                                <div class="linha-divisor"></div>
+                                <span>continue com</span>
+                                <div class="linha-divisor"></div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="login-social">
+                                <button type="button" class="botao-social neu-social">
+                                    <img src="../img/icone_g.svg">
+                                </button>
+                                <button type="button" class="botao-social neu-social">
+                                    <img src="../img/icone_gh.svg">
+                                </button>
+                                <button type="button" class="botao-social neu-social">
+                                    <img src="../img/icone_f.svg">
+                                </button>
                             </div>
 
-                            <button  type="submit" class="botao-neu botao-login">
-                                <span class="texto-botao">Entrar</span> 
-                            </button>
-                        </form>
-                    </section>
+                            <div class="link-cadastro">
+                                <p>Não tem uma conta? <a target="_blank" href="cadastro.html">Cadastre-se</a></p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div id="box-direita">
 
-                    <section>
-                        <div class="divisor">
-                            <div class="linha-divisor"></div>
-                            <span>continue com</span>
-                            <div class="linha-divisor"></div>
-                        </div>
-                    </section>
-
-                    <section>
-                        <div class="login-social">
-                            <button type="button" class="botao-social neu-social">
-                                <img src="../img/icone_g.svg">
-                            </button>
-                            <button type="button" class="botao-social neu-social">
-                                <img src="../img/icone_gh.svg">
-                            </button>
-                            <button type="button" class="botao-social neu-social">
-                                <img src="../img/icone_f.svg">
-                            </button>
-                        </div>
-
-                        <div class="link-cadastro">
-                            <p>Não tem uma conta? <a target="_blank" href="cadastro.html">Cadastre-se</a></p>
-                        </div>
-                    </section>
                 </div>
             </div>
         </main>

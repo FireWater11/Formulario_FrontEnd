@@ -18,11 +18,25 @@ body {
     line-height: 1.6;
 }
 
-/*.container-login {
-    width: 100%;
-    max-width: 420px;
+#container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
 }
-*/
+
+
+#box-esquerda {
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+}
+
+#box-direita {
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+}
 
 .cartao-login {
     background: #e0e5ec;
