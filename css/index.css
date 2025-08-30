@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +16,43 @@ body {
     background-color: #eeeeee;
 }
 
+#cadernoEspiral {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    top: 10px;
+
+    & .conexoes {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: linear-gradient(to top left, #222, #555);
+        box-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.6), 
+            inset -1px -1px 2px rgba(255, 255, 255, 1.4);
+        position: relative;
+    }
+}
+
 #cadernoData {
     position: relative;
     display: inline-flex;
     font-size: 32px;
     top: 70px;
-    left: 50px; 
+    left: 50px;
+    
+    & input {
+        width: 40px;
+        border: transparent;
+        border-bottom: 2px solid black;
+        text-align: center;
+        font-size: 18px;
+        font-family: "Kalam", cursive;
+    }
+
+    & input:focus {
+        outline: none;
+    }
 }
 
 #cadernoSemana {
@@ -28,16 +63,34 @@ body {
     left: 160px;
 
     & .cadernoSemanaDia {
+        position: relative;
+        width: 30px;
         font-size: 24px;
         font-family: 'Courier New', Courier, monospace;
         border: 2px solid black;
-        width: 30px;
+        border-radius: 5px;
+        cursor: pointer;
 
         & .spanDias {
             position: relative;
             display: flex;
             justify-content: center;
+            pointer-events: none; /* clicar no dia sem interferir no span */
         }   
+    }
+
+    & .cadernoSemanaDia .check {
+        position: absolute;
+        top: -10px;
+        left: -15px;
+        font-size: 64px;
+        color: green;
+        display: none;
+    }
+
+    & .select {
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -73,4 +126,8 @@ body {
         top: -30px;
         left: 5px;
     }
+}
+
+#containerLogin {
+    margin-top: -400px;
 }
