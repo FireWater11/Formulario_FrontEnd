@@ -128,6 +128,27 @@ body {
     }
 }
 
-#containerLogin {
-    margin-top: -400px;
+#telaLogin {
+    position: absolute;
+    width: 100%;
+
+    & #textoSuperior {
+        position: relative;
+        top: 20px;
+        left: -20px;
+        justify-content: center;
+        display: flex; 
+        font-size: 64px;
+        font-family: 'Kalam', cursive;
+        font-weight: 700;
+        
+    }
+
+    & label {
+        display: block;
+        position: relative;
+        left: 180px;
+        font-family: 'Kalam', cursive;
+        font-size: 32px;
+    }
 }
