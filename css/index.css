@@ -147,8 +147,80 @@ body {
     & label {
         display: block;
         position: relative;
-        left: 180px;
-        font-family: 'Kalam', cursive;
+        font-family: 'Courier New', Courier, monospace;
         font-size: 32px;
     }
+
+    & #labelEmail {
+        top: 20px;
+    }
+
+    & #labelSenha {
+        top: 40px;
+    }   
+
+
+    & #emailInput {
+        display: block;
+        position: relative;
+        left: 120px;
+        top: 10px;
+        width: 400px;
+        height: 50px;
+        font-size: 24px;
+        font-family: 'Kalam', cursive;
+        font-weight: 800;
+        padding-left: 10px;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+
+    & #senhaInput {
+        display: block;
+        position: relative;
+        left: 120px;
+        top: 30px;
+        width: 400px;
+        height: 50px;
+        font-size: 24px;
+        font-family: 'Kalam', cursive;
+        font-weight: 800;
+        padding-left: 10px;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+}
+
+
+#formLogin .neu-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#formLogin .neu-input input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#formLogin .neu-input label {
+    position: absolute;
+    left: 140px;    
+    top: 30%;
+    transform: translateY(0);
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+#formLogin .neu-input input:focus + label{
+    top: 8px;
+    font-size: 24px;
+    color: black    ;
+    transform: translateY(-120%);
+    text-align: center;
 }
