@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+}
+
+#cadernoData {
+    position: relative;
+    display: inline-flex;
+    font-size: 32px;
+    top: 70px;
+    left: 50px; 
+}
+
+#cadernoSemana {
+    position: relative;
+    display: inline-flex;
+    gap: 20px;
+    top: 70px;
+    left: 160px;
+
+    & .cadernoSemanaDia {
+        font-size: 24px;
+        font-family: 'Courier New', Courier, monospace;
+        border: 2px solid black;
+        width: 30px;
+
+        & .spanDias {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }   
+    }
+}
+
+#container {
+    background-color: white;
+    width: 700px;
+    height: 850px;
+    border: 8px solid black;
+    border-top: transparent;
+    padding-left: 10px;
+    position: relative;
+}
+
+#cadernoPrincipal {
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cadernoLinhaMarcacao{
+    height: 2px;
+    width: calc(100% - 10px);
+    background-color: black;
+    margin: 30px 0px;
+}
+
+#cadernoLogo {
+
+    & #cadernoLogoSpiral {
+        width: 101px;
+        height: 101px;
+        position: relative;
+        top: -30px;
+        left: 5px;
+    }
+}
