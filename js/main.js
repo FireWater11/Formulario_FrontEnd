@@ -8,6 +8,8 @@ for (let i = 0; i < dias.length; i++) {
             check.style.display = 'none';
         } else {
             check.style.display = 'block';
-        }
+        };
     };
-}
+};
+
+

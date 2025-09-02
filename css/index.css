@@ -152,19 +152,40 @@ body {
     }
 
     & #labelEmail {
-        top: 20px;
+        top: 30px;
     }
 
     & #labelSenha {
         top: 40px;
-    }   
+    }
+    
+    & #iconeHidden {
+        position: relative;
+        top: -10px;
+        left: 470px;
+        cursor: pointer;
+
+        & img {
+            position: relative;
+            top: -3px;
+            left: 5px;
+            width: 35px;
+            height: 35px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        & img:hover {
+            transform: scale(1.1);
+        }
+    }
 
 
     & #emailInput {
         display: block;
         position: relative;
         left: 120px;
-        top: 10px;
+        top: 20px;
         width: 400px;
         height: 50px;
         font-size: 24px;
@@ -173,6 +194,9 @@ body {
         padding-left: 10px;
         border-radius: 10px;
         border: 2px solid black;
+        box-shadow: 
+            inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset -5px -5px 10px rgba(255, 255, 255, 0.7);
     }
 
     & #senhaInput {
@@ -188,6 +212,9 @@ body {
         padding-left: 10px;
         border-radius: 10px;
         border: 2px solid black;
+        box-shadow: 
+            inset 5px 5px 10px rgba(0, 0, 0, 0.5), 
+            inset -5px -5px 10px rgba(255, 255, 255, 0.7);
     }
 }
 
